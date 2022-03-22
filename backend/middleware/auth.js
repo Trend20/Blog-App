@@ -29,6 +29,9 @@ module.exports = function ValidateLoginInput(data){
     };
 };
 
+
+// REGISTER VALIDATION
+
 module.exports = function validateRegisterInput(data){
 
   let errors = {};
