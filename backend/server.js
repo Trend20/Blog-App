@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 5500;
 // middleware
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.json());
 
 // using project routes
 app.use('user', userRoutes);
