@@ -15,16 +15,21 @@ const PORT = process.env.PORT || 5500;
 app.use(cors());
 app.use(bodyParser.json());
 
-const url = process.env.DATABASE_URL;
-
-// connect to the db
-const connection = mongoose.connection;
-mongoose.connect(url)
 // using project routes
 app.use('user', userRoutes);
 app.use('articles', articlesRoutes);
 
 require('dotenv').config();
+
+
+// connect to the db
+const url = process.env.DATABASE_URL;
+mongoose.connect(url);
+const connection = mongoose.connection;
+
+connection.once('open', () =>{
+  console.log('Application connected to the database successfully!!');
+});
 
 app.listen(PORT, () =>{
   console.log(`Application is listening on port ${PORT}`);
