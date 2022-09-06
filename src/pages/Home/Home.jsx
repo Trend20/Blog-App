@@ -1,5 +1,5 @@
 import Header from '../../components/Header/Header';
-import Post from '../../components/Post/Post';
+import Posts from '../../components/Posts/Posts';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import './Home.css';
 
@@ -8,7 +8,7 @@ const Home = () => {
     <>
      <Header />
       <div className='home'>
-        <Post />
+        <Posts />
         <Sidebar />
       </div>
     </>
