@@ -19,7 +19,7 @@ const TopBar = () => {
         </ul>
       </div>
       <div className="topRight">
-        <img src="" alt="" className="topImg" />
+        <img src="/assets/profile.jpg" alt="profile" className="topImg" />
         <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
