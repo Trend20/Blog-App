@@ -17,8 +17,8 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 // using project routes
-app.use('user', userRoutes);
-app.use('articles', articlesRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api/articles', articlesRoutes);
 
 require('dotenv').config();
 
