@@ -4,10 +4,9 @@ const jwt = require("jsonwebtoken");
 const router = express.Router();
 const keys = require('../config/keys');
 
-const User = require('../models/Users.model');
+const User = require('../models/User');
 
 // import input validations
-// const validateLoginInput = require('../middleware/auth');
 const {validateRegisterInput, validateLoginInput} = require('../middleware/auth');
 
 
