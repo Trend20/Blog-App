@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 // using project routes
-app.use('/api/user', userRoutes);
+app.use('/api/users', userRoutes);
 app.use('/api/posts', postsRoutes);
 app.use('/api/auth', authRoute);
 
