@@ -35,9 +35,7 @@ const url = process.env.DATABASE_URL;
 
 mongoose.connect(url, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify:true
+    useUnifiedTopology: true
 })
   .then(() =>
     console.log("Application connected to the database successfully!!")
