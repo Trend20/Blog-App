@@ -39,7 +39,7 @@ const SinglePost = () => {
           <span>
             Author:
             <b className="singlePostAuthor">
-              <Link className="link" to={`/user?${postItem.username}`}>
+              <Link className="link" to={`/?user=${postItem.username}`}>
                 {postItem.username}
               </Link>
             </b>
