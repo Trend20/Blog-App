@@ -8,16 +8,17 @@ import './Home.css';
 
 const Home = () => {
   const [posts, setPosts ] = useState([]);
+  const { search } = useLocation();
 
   // fetch posts
   useEffect(() =>{
     const fetchPosts = async() =>{
-      const res = await axios.get('http://localhost:5500/api/posts');
+      const res = await axios.get('http://localhost:5500/api/posts' + search);
       console.log(res);
       setPosts(res.data);
     }
     fetchPosts();
-  },[]);
+  },[search]);
   return (
     <>
      <Header />

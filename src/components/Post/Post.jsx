@@ -9,7 +9,7 @@ const Post = ({post}) => {
         <div className="postCats">
           {post.categories.map(category =>(
             <span className="postCat">
-            <Link className="link" to="/posts?cat=Music">
+            <Link className="link" to={`/posts?cat=${category.name}`}>
               {category.name}
             </Link>
           </span>
