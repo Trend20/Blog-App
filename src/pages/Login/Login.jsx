@@ -1,19 +1,56 @@
-import './Login.css';
+import axios from "axios";
+import { useContext, useRef } from "react";
+import { Context } from "../../context/Context";
+import { Link } from "react-router-dom";
+import "./Login.css";
 
 const Login = () => {
+  
+  const userRef = useRef();
+  const passwordRef = useRef();
+  const { user, dispatch, isFeatching } = useContext(Context);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch({type: "LOGIN_START"});
+    try {
+      const res = await axios.post('http://localhost:5500/api/auth/login',{
+        username: userRef.current.value,
+        password: passwordRef.current.value
+      })
+      dispatch({type: "LOGIN_FAILURE", payload: res.data});
+    } catch (error) {
+      dispatch({type: "LOGIN_FAILURE"});
+    }
+  };
+console.log(user);
   return (
     <div className="login">
       <span className="loginTitle">Login</span>
-      <form className="loginForm">
-        <label>Email</label>
-        <input className="loginInput" type="text" placeholder="Enter your email..." />
+      <form className="loginForm" onSubmit={handleSubmit}>
+        <label>Username</label>
+        <input
+          className="loginInput"
+          type="text"
+          placeholder="Enter your username..."
+          ref={userRef}
+        />
         <label>Password</label>
-        <input className="loginInput" type="password" placeholder="Enter your password..." />
-        <button className="loginButton">Login</button>
+        <input
+          className="loginInput"
+          type="password"
+          placeholder="Enter your password..."
+          ref={passwordRef}
+        />
+        <button className="loginButton" type="submit">
+          Login
+        </button>
       </form>
-        <button className="loginRegisterButton">Register</button>
+      <button className="loginRegisterButton">
+        <Link to="/register" className="link">Register</Link>
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
