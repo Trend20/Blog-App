@@ -8,7 +8,7 @@ const Login = () => {
   
   const userRef = useRef();
   const passwordRef = useRef();
-  const { user, dispatch, isFeatching } = useContext(Context);
+  const { user, dispatch, isFetching } = useContext(Context);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,7 +42,7 @@ console.log(user);
           placeholder="Enter your password..."
           ref={passwordRef}
         />
-        <button className="loginButton" type="submit">
+        <button className="loginButton" type="submit" disabled={isFetching}>
           Login
         </button>
       </form>
