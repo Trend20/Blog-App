@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5500;
 
 // routes
 const userRoutes = require('./routes/users');
-const postsRoutes = require('./routes/posts');
+const postRoutes = require('./routes/posts');
 const authRoute = require('./routes/auth');
 const catRoutes = require('./routes/categories');
 
@@ -25,7 +25,7 @@ app.use("/images", express.static(path.join(__dirname, "/images")));
 
 // using project routes
 app.use('/api/users', userRoutes);
-app.use('/api/posts', postsRoutes);
+app.use('/api/posts', postRoutes);
 app.use('/api/auth', authRoute);
 app.use('/api/categories', catRoutes);
 

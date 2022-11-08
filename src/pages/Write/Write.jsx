@@ -1,6 +1,5 @@
 import axios from 'axios';
-import { useContext } from 'react';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Context } from '../../context/Context';
 import './Write.css';
 
@@ -11,33 +10,32 @@ const Write = () => {
   const [ file, setFile ] = useState(null)
   const { user } = useContext(Context);
 
-  const handleSubmit = async (e) =>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     const newPost = {
       username: user.username,
       title,
-      description
-    }
-    if(file){
+      description,
+    };
+    if (file) {
       const data = new FormData();
       const filename = Date.now() + file.name;
-      data.append("name", filename)
-      data.append("file", file)
+      data.append("name", filename);
+      data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post('http://localhost:5500/api/upload', data)
+        await axios.post("http://localhost:5500/api/upload", data);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     }
     try {
-      const res = axios.post('http://localhost:5500/api/posts', newPost);
+      const res = await axios.post("http://localhost:5500/api/posts", newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (error) {
-      
+      console.error(error.response.data);
     }
-  }
+  };
   return (
     <div className="write">
       {file && (<img
