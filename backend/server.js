@@ -12,10 +12,10 @@ const PORT = process.env.PORT || 5500;
 
 
 // routes
-const userRoutes = require('./routes/users');
-const postRoutes = require('./routes/posts');
+const userRoute = require('./routes/users');
+const postRoute = require('./routes/posts');
 const authRoute = require('./routes/auth');
-const catRoutes = require('./routes/categories');
+const catRoute = require('./routes/categories');
 
 // middleware
 app.use(cors());
@@ -24,10 +24,10 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 // using project routes
-app.use('/api/users', userRoutes);
-app.use('/api/posts', postRoutes);
+app.use('/api/users', userRoute);
+app.use('/api/posts', postRoute);
 app.use('/api/auth', authRoute);
-app.use('/api/categories', catRoutes);
+app.use('/api/categories', catRoute);
 
 
 // connect to the db
