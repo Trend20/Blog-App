@@ -1,19 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 .login {
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-  background-size: cover;
+  background-color: aliceblue;
+  width: 100%;
+  font-family: 'Jost', sans-serif;
 }
 
 .loginTitle {
   font-size: 50px;
+}
+
+.login-contents{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background: #fff;
+  color: #585858;
+  padding: 30px;
+}
+
+.login-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-header i{
+  font-size: 30px;
+  color: #4d61fc;
+}
+
+.login-header h1{
+  color: #3b3663;
+  font-size: 28px;
+}
+
+.login-header h5{
+  color: #696687;
+  font-size: 18px;
+  opacity: .8;
 }
 
 .loginForm {
