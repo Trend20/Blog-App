@@ -90,6 +90,11 @@
   border-radius: 5px;
   font-weight: 700;
   font-size: 1.2rem;
+  transition: 0.3s ease-out;
+}
+
+.loginButton:hover{
+  background: #273ee8;
 }
 
 .loginButton i{
