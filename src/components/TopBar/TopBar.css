@@ -73,6 +73,18 @@
   border-radius: none;
   border-radius: 25px;
   cursor: pointer;
+  border: 2px solid #4d61fc;
+}
+
+.action-btn .link{
+  font-weight: 600;
+}
+
+.action-btn:hover{
+  transition: .5s ease-in;
+  color: #fff;
+  background: #4d61fc;
+  border: 2px solid #fff;
 }
 
 
