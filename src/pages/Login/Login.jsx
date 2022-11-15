@@ -3,6 +3,7 @@ import { useContext, useRef } from "react";
 import { Context } from "../../context/Context";
 import { Link } from "react-router-dom";
 import { FaSignInAlt } from "react-icons/fa";
+import { FiArrowRight } from 'react-icons/fi'
 import "./Login.css";
 
 const Login = () => {
@@ -39,18 +40,17 @@ const Login = () => {
           <input
             className="loginInput"
             type="text"
-            placeholder="Enter your username..."
             ref={userRef}
           />
           <label>Password</label>
           <input
             className="loginInput"
             type="password"
-            placeholder="Enter your password..."
             ref={passwordRef}
           />
           <button className="loginButton" type="submit" disabled={isFetching}>
             Login
+            <i><FiArrowRight size= {25}/></i>
           </button>
         </form>
         <button className="loginRegisterButton">
