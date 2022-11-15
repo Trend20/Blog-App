@@ -3,7 +3,6 @@ const router = express.Router();
 
 // import post model
 const Post = require('../models/Post');
-const User = require('../models/User');
 
 // CREATE POST
 router.post("/", async(req, res) =>{
