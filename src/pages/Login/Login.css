@@ -104,13 +104,20 @@
 }
 
 .loginRegisterButton {
-  position: absolute;
-  top: 60px;
-  right: 20px;
   background-color: teal;
   cursor: pointer;
   padding: 10px;
   border: none;
   color: white;
   border-radius: 10px;
+}
+
+.sign-up{
+  margin-top: 30px;
+}
+
+.signup-link{
+  color: #4d61fc;
+  margin-left: 10px;
+  text-decoration: none;
 }

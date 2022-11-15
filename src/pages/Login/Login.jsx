@@ -53,11 +53,11 @@ const Login = () => {
             <i><FiArrowRight size= {25}/></i>
           </button>
         </form>
-        <button className="loginRegisterButton">
-          <Link to="/register" className="link">
-            Register
+        <p className="sign-up">Not a member yet? 
+        <Link to="/register" className="signup-link">
+            Sign Up
           </Link>
-        </button>
+        </p>
       </div>
     </div>
   );
