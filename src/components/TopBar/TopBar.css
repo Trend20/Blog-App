@@ -54,3 +54,22 @@
   font-size: 18px;
   margin-left: 15px;
 }
+.topList{
+  display: flex;
+}
+
+.topBarListItem{
+  display: flex;
+  list-style: none;
+}
+
+.action-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 30%;
+}
+
+
+

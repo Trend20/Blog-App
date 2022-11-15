@@ -45,18 +45,11 @@ const TopBar = () => {
             />
           </Link>
         ) : (
-          <ul className="topList">
-            <li className="topListItem">
-              <Link className="link" to="/login">
-                LOGIN
+          <button className='action-btn'>
+            <Link className="link" to="/login">
+                Join
               </Link>
-            </li>
-            <li className="topListItem">
-              <Link className="link" to="/register">
-                REGISTER
-              </Link>
-            </li>
-          </ul>
+          </button>
         )}
         <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
       </div>
