@@ -1,19 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 .register {
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/317355/pexels-photo-317355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-size: cover;
+  background-color: aliceblue;
+  width: 100%;
+  font-family: 'Jost', sans-serif;
 }
 
 .registerTitle {
   font-size: 50px;
+}
+
+.register-contents{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background: #ffffff;
+  color: #585858;
+  padding: 30px;
+  border-radius: 5px;
+}
+.login-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-header i{
+  font-size: 30px;
+  color: #4d61fc;
+}
+
+.login-header h1{
+  color: #3b3663;
+  font-size: 28px;
+}
+
+.login-header h5{
+  color: #696687;
+  font-size: 18px;
+  opacity: .8;
 }
 
 .registerForm {
@@ -24,28 +57,63 @@
 
 .registerForm > label {
   margin: 10px 0;
+  color: #696687;
+  font-size: 18px;
 }
 
 .registerInput {
   padding: 10px;
   background-color: white;
   border: none;
-  border-radius: 10px;
+  border-bottom: 1px solid #96959c;
+  opacity: .8;
 }
 
 .registerInput:focus {
   outline: none;
+  border-bottom: 2px solid #4d61fc;
+  transition: .3s ease-in;
 }
 
-.registerButton {
-  margin-top: 20px;
-  cursor: pointer;
-  background-color: teal;
-  color: white;
+hr{
+  margin-top: 10px;
+}
+
+.social-icons{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.social-icons h5{
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: .8;
+}
+
+.social-icons span{
+  display: flex;
+  width: 100%;
+}
+
+.social-icons span i{
   padding: 10px;
+}
+.registerButton {
+  margin-top: 25px;
+  cursor: pointer;
+  color: white;
+  padding: 15px;
   border: none;
-  border-radius: 10px;
   text-align: center;
+  align-items: center;
+  display: flex;
+  background: #4d61fc;
+  width: 40%;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: 0.3s ease-out;
 }
 
 .registerLoginButton {
