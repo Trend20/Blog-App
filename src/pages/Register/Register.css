@@ -116,6 +116,10 @@ hr{
   transition: 0.3s ease-out;
 }
 
+.registerButton:hover{
+  background: #273ee8;
+}
+
 .registerLoginButton {
   position: absolute;
   top: 60px;
@@ -126,4 +130,9 @@ hr{
   border: none;
   color: white;
   border-radius: 10px;
+}
+
+
+.login-text{
+  margin-top: 10px;
 }

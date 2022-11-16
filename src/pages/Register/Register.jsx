@@ -66,12 +66,12 @@ const Register = () => {
       <div className="social-icons">
         <h5>Or create account using social media!</h5>
         <span>
-          <i><MdFacebook size={25}/></i>
-          <i><AiFillTwitterCircle size={25}/></i>
-          <i><AiFillGithub size={25}/></i>
+          <i><MdFacebook size={25} fill='#3b5998'/></i>
+          <i><AiFillTwitterCircle size={25} fill='#1da1f2' /></i>
+          <i><AiFillGithub size={25} fill='#171515' /></i>
         </span>
       </div>
-      <p className="sign-up">Already a member? 
+      <p className="login-text">Already a member? 
         <Link to="/login" className="signup-link">
             Login
           </Link>
