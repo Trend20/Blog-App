@@ -2,10 +2,9 @@
   display: flex;
   align-items: center;
   position: sticky;
-  top: 30px;
+  top: 0;
   width: 100%;
   height: 50px;
-  /* padding: 20px 0px; */
   background-color: white;
   font-family: 'Josefin Sans', sans-serif;
 }
@@ -20,6 +19,7 @@
 .topLeft img{
   display: flex;
   max-width: 50%;
+  margin-top: 40px !important;
 }
 
 .topRight{
@@ -27,10 +27,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .topCenter{
   flex: 6;
+  margin-top: 40px;
 }
 
 .topIcon{
