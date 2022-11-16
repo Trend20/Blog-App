@@ -2,14 +2,27 @@
   display: flex;
   align-items: center;
   position: sticky;
-  top: 0;
+  top: 30px;
   width: 100%;
   height: 50px;
+  /* padding: 20px 0px; */
   background-color: white;
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.topLeft, .topRight{
+.topLeft{
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.topLeft img{
+  display: flex;
+  max-width: 50%;
+}
+
+.topRight{
   flex: 3;
   display: flex;
   align-items: center;

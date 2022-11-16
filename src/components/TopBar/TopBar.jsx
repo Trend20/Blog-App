@@ -12,10 +12,11 @@ const TopBar = () => {
   return (
     <div className='topBar'>
       <div className="topLeft">
-        <i className="topIcon fa-brands fa-facebook"></i>
+        {/* <i className="topIcon fa-brands fa-facebook"></i>
         <i className="topIcon fa-brands fa-twitter"></i>
         <i className="topIcon fa-brands fa-github"></i>
-        <i className="topIcon fa-brands fa-hashnode"></i>
+        <i className="topIcon fa-brands fa-hashnode"></i> */}
+        <img src="logo.png" alt="logo" />
       </div>
       <div className="topCenter">
         <ul className="topBarList">
