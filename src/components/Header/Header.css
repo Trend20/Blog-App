@@ -20,14 +20,14 @@
   margin-top: 20px;
 }
 
-form{
+.headerTitles form{
   display: flex;
   width: 30%;
   align-items: center;
   margin-top: 30px;
 }
 
-input, button{
+.headerTitles input, .headerTitles button{
   outline: none;
   border: none;
   padding: 20px;
