@@ -84,7 +84,7 @@
 .scroll-down{
   margin-top: 40px;
   cursor: pointer;
-  animation: scroll 1s ease-out infinite;
+  animation: scroll 3s ease-out infinite;
 }
 
 .scroll-down:hover{

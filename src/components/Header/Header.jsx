@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { CgScrollV } from 'react-icons/cg'
 import './Header.css';
 
@@ -12,9 +12,9 @@ const Header = () => {
           <input className='input' type="text" placeholder='Email Address' />
           <button className='sub-btn' type='submit'>Subscribe</button>
         </form>
-        <div className="scroll-down">
+        <Link className="scroll-down" to="posts" smooth={true} >
           <CgScrollV size={50} color="blue" />
-        </div>
+        </Link>
       </div>
       <img className='headerImg' src="/assets/home2.jpg" alt="header-img" />
     </div>
