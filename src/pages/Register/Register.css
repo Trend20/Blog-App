@@ -10,6 +10,8 @@
   background-color: aliceblue;
   width: 100%;
   font-family: 'Jost', sans-serif;
+  margin-top: 60px;
+  overflow: hidden;
 }
 
 .registerTitle {
@@ -22,7 +24,7 @@
   width: 30%;
   background: #ffffff;
   color: #585858;
-  padding: 30px;
+  padding: 20px;
   border-radius: 5px;
 }
 .login-header{
@@ -56,9 +58,9 @@
 }
 
 .registerForm > label {
-  margin: 10px 0;
   color: #696687;
   font-size: 18px;
+  margin: 10px 0;
 }
 
 .registerInput {
@@ -67,6 +69,7 @@
   border: none;
   border-bottom: 1px solid #96959c;
   opacity: .8;
+  margin-top: -10px;
 }
 
 .registerInput:focus {
@@ -100,7 +103,7 @@ hr{
   padding: 10px;
 }
 .registerButton {
-  margin-top: 25px;
+  margin-top: 20px;
   cursor: pointer;
   color: white;
   padding: 15px;
@@ -134,5 +137,5 @@ hr{
 
 
 .login-text{
-  margin-top: 10px;
+  margin-top: 5px;
 }
