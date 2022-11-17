@@ -50,7 +50,7 @@ const TopBar = () => {
               </Link>
           </button>
         )}
-        <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
+        {/* <i className="topSearchIcon fa-solid fa-magnifying-glass"></i> */}
       </div>
     </div>
   )
