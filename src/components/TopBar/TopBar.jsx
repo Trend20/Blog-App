@@ -12,7 +12,9 @@ const TopBar = () => {
   return (
     <div className='topBar'>
       <div className="topLeft">
-        <img src="logo.png" alt="logo" />
+        <Link to="/">
+          <img src="logo.png" alt="logo" />
+        </Link>
       </div>
       <div className="topCenter">
         <ul className="topBarList">
