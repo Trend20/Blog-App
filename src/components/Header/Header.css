@@ -73,3 +73,21 @@
   height: 610px;
   object-fit: cover;
 }
+
+@keyframes scroll {
+  0%   { transform: translateY(0); opacity: 1; }
+  25%  { opacity: 1; }
+  75%  { transform: translateY(.75em); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+.scroll-down{
+  margin-top: 40px;
+  cursor: pointer;
+  animation: scroll 1s ease-out infinite;
+}
+
+.scroll-down:hover{
+  animation: none;
+  transition: .3s ease;
+}

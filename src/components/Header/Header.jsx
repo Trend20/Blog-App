@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { CgScrollV } from 'react-icons/cg'
 import './Header.css';
 
 const Header = () => {
@@ -10,6 +12,9 @@ const Header = () => {
           <input className='input' type="text" placeholder='Email Address' />
           <button className='sub-btn' type='submit'>Subscribe</button>
         </form>
+        <div className="scroll-down">
+          <CgScrollV size={50} color="blue" />
+        </div>
       </div>
       <img className='headerImg' src="/assets/home2.jpg" alt="header-img" />
     </div>
