@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .header{
-  margin-top: 60px;
+  margin-top: 20px;
   font-family: 'Jost', sans-serif !important;
+  position: relative;
+  z-index: -1;
 }
 
 .headerTitles{
@@ -12,8 +14,9 @@
   justify-content: center;
   color: #444;
   position: absolute;
-  top: 40%;
+  top: 30%;
   width: 100%;
+  z-index: 10;
 }
 
 .headerTitles h3, p{
