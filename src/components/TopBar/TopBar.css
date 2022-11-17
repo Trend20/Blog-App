@@ -64,6 +64,10 @@
   color: #444;
 }
 
+.topListItem{
+  cursor: pointer;
+}
+
 .topSearchIcon{
   cursor: pointer;
   color: #666;
