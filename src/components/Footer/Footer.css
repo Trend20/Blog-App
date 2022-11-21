@@ -7,6 +7,10 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
+h3, 
+h1{
+  line-height: 1.5;
+}
 .footer-details{
   display: flex;
   width: 100%;
