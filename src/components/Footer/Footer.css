@@ -1,0 +1,8 @@
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px;
+  background-color: rgb(228, 247, 247);
+}
+

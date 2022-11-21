@@ -9,6 +9,7 @@ import Write from "./pages/Write/Write";
 import { Routes, Route } from "react-router-dom";
 import { useContext } from 'react';
 import { Context } from './context/Context';
+import Footer from './components/Footer/Footer';
 function App() {
   const {user}= useContext(Context);
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/write" element={user ? <Write /> : <Login />} />
         <Route path="/settings" element={user ? <Settings /> : <Login />} />
       </Routes>
+      <Footer />
     </>
   );
 }
