@@ -32,7 +32,7 @@ const Subscribe = () => {
     } catch (error) {
       console.log(error);
     }
-
+    setEmail('');
   };
 
   return (
