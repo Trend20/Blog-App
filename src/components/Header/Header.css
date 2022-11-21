@@ -86,11 +86,11 @@
 
 .scroll-down{
   margin-top: 40px;
-  cursor: pointer;
   animation: scroll 2s ease-out infinite;
 }
 
 .scroll-down:hover{
   animation: none;
   transition: .3s ease;
+  cursor: pointer !important;
 }

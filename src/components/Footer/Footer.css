@@ -11,6 +11,10 @@ h3,
 h1{
   line-height: 1.5;
 }
+
+hr{
+  opacity: .5;
+}
 .footer-details{
   display: flex;
   width: 100%;
