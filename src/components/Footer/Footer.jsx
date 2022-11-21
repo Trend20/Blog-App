@@ -1,5 +1,7 @@
 import Subscribe from '../Subscribe/Subscribe';
 import { Link } from 'react-router-dom';
+import { FaFacebookF, FaLinkedinIn} from 'react-icons/fa';
+import { BsTwitter } from 'react-icons/bs';
 import './Footer.css';
 
 
@@ -13,24 +15,23 @@ const Footer = () =>{
       <div className="footer-details">
         <div className="details">
           <img src="logo.png" alt="footer-logo" />
-          <p>Publish your Work Here!</p>
         </div>
         <div className="links">
-          <Link to="/about">About</Link>
-          <Link to="/about">Price</Link>
-          <Link to="/about">Login</Link>
-          <Link to="/about">Sign Up</Link>
-          <Link to="/about">Contact</Link>
+          <Link to="/about" className='footer-link'>About</Link>
+          <Link to="/about" className='footer-link'>Price</Link>
+          <Link to="/about" className='footer-link'>Login</Link>
+          <Link to="/about" className='footer-link'>Sign Up</Link>
+          <Link to="/about" className='footer-link'>Contact</Link>
         </div>
         <div className="social">
           <Link to="/about">
-            <i></i>
+            <i><BsTwitter size={25} fill='#1da1f2' /></i>
           </Link>
           <Link to="/about">
-            <i></i>
+            <i><FaFacebookF size={25} fill='#3b5998'/></i>
           </Link>
           <Link to="/about">
-            <i></i>
+            <i><FaLinkedinIn size={25} fill='#3b5998' /></i>
           </Link>
         </div>
       </div>
