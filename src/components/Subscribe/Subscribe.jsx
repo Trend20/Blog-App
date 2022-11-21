@@ -9,13 +9,33 @@ const Subscribe = () => {
     setEmail(event.target.value);
   };
 
+  const FORM_URL = '';
   // form submission
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
+
+    const data = new FormData(event.target);
+
+    try {
+      const response = await fetch(FORM_URL, {
+        method: 'post',
+        body: data,
+        headers:{
+          accept: 'application/json'
+        },
+      })
+      const json = await response.json();
+      if(json.status === "success"){
+        return;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form action="https://app.convertkit.com/forms/3801560/subscriptions" onSubmit={handleFormSubmit}>
       <input
         className="input"
         value={email}
