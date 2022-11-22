@@ -3,8 +3,11 @@
 .header{
   margin-top: 20px;
   font-family: 'Jost', sans-serif !important;
-  position: relative;
-  z-index: -1;
+  background: url(/public/assets/home2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 86vh;
 }
 
 .headerTitles{
@@ -13,10 +16,8 @@
   align-items: center;
   justify-content: center;
   color: #444;
-  position: absolute;
-  top: 30%;
   width: 100%;
-  z-index: 10;
+  padding-top: 150px;
 }
 
 .headerTitles h3, p{
@@ -35,11 +36,11 @@
   font-size: 100px;
 }
 
-.headerImg{
+/* .headerImg{
   width: 100%;
   height: 610px;
   object-fit: cover;
-}
+} */
 
 @keyframes scroll {
   0%   { transform: translateY(0); opacity: 1; }

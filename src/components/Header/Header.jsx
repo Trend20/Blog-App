@@ -14,7 +14,6 @@ const Header = () => {
           <CgScrollV size={50} color="blue" />
         </Link>
       </div>
-      <img className='headerImg' src="/assets/home2.jpg" alt="header-img" />
     </div>
   )
 }
