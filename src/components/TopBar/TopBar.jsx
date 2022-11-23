@@ -23,9 +23,9 @@ const TopBar = () => {
               HOME
             </Link>
           </li>
-          <li className="topBarListItem">ABOUT</li>
-          <li className="topBarListItem">WORK</li>
-          <li className="topBarListItem">CONTACT</li>
+          <li className="topBarListItem">
+            <Link to="/about" className='link'>ABOUT</Link>
+          </li>
           <li className="topBarListItem">
             <Link className='link' to="/write">
               WRITE

@@ -18,10 +18,8 @@ const Footer = () =>{
         </div>
         <div className="links">
           <Link to="/about" className='footer-link'>About</Link>
-          <Link to="/about" className='footer-link'>Price</Link>
-          <Link to="/about" className='footer-link'>Login</Link>
-          <Link to="/about" className='footer-link'>Sign Up</Link>
-          <Link to="/about" className='footer-link'>Contact</Link>
+          <Link to="/login" className='footer-link'>Login</Link>
+          <Link to="/register" className='footer-link'>Sign Up</Link>
         </div>
         <div className="social">
           <Link to="/about">

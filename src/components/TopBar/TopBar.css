@@ -78,11 +78,6 @@
   display: flex;
 }
 
-.topBarListItem{
-  display: flex;
-  list-style: none;
-}
-
 .action-btn{
   display: flex;
   align-items: center;
@@ -97,7 +92,7 @@
 }
 
 .action-btn .link{
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .action-btn:hover{
