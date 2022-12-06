@@ -1,13 +1,19 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import './SinglePost.css';
+import { Context } from '../../context/Context';
 
 const SinglePost = () => {
   const location = useLocation();
   const path = location.pathname.split('/')[2]
   // console.log(path);
+  const PF = "http://localhost:5500/images/";
+  const { user } = useContext(Context);
+  const [title, setTitle ] = useState('');
+  const [description, setDescription] = useState('');
+  const [updateMode, setUpdateMode] = useState(false);
 
   const [postItem, setPostItem] = useState({});
   // fetch the post using id
@@ -20,20 +26,31 @@ const SinglePost = () => {
     getPost();
   }, [path]);
 
+  // delete 
+
+  const handleDelete = async() =>{
+    try {
+      await axios.delete(`http://localhost:5500/api/posts/${postItem._id}`, {data: {username: user.username}});
+      window.location.replace("/");
+    } catch (error) {
+      
+    }
+  }
+
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
         { postItem.photo && (<img
           className="singlePostImg"
-          src={postItem.photo}
+          src={PF + postItem.photo}
           alt=""
         />)}
         <h1 className="singlePostTitle">
          {postItem.title}
-          <div className="singlePostEdit">
-            <i className="singlePostIcon far fa-edit"></i>
-            <i className="singlePostIcon far fa-trash-alt"></i>
-          </div>
+         {postItem.username === user?.username && ( <div className="singlePostEdit">
+            <i className="singlePostIcon far fa-edit" onClick={() => setUpdateMode(true)}></i>
+            <i className="singlePostIcon far fa-trash-alt" onClick={handleDelete}></i>
+          </div>)}
         </h1>
         <div className="singlePostInfo">
           <span>

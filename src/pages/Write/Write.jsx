@@ -30,7 +30,7 @@ const Write = () => {
       }
     }
     try {
-      const res = await axios.post("http://localhost:5500/api/posts/posts", newPost);
+      const res = await axios.post("http://localhost:5500/api/posts", newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (error) {
       console.error(error.response.data);
