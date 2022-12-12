@@ -21,19 +21,30 @@ const SinglePost = () => {
     const getPost = async() =>{
       const res = await axios.get('http://localhost:5500/api/posts/' + path)
       setPostItem(res.data);
-      // console.log(res)
+      setTitle(res.data.title);
+      setDescription(res.data.description);
     }
     getPost();
   }, [path]);
 
   // delete 
-
   const handleDelete = async() =>{
     try {
       await axios.delete(`http://localhost:5500/api/posts/${postItem._id}`, {data: {username: user.username}});
       window.location.replace("/");
     } catch (error) {
-      
+      console.log(error);
+    }
+  }
+
+  // update
+  const handleUpdate = async () =>{
+    try {
+      await axios.put(`http://localhost:5500/api/posts/${postItem._id}`, {username: user.username, title, description});
+      // window.location.reload();
+      setUpdateMode(false)
+    } catch (error) {
+      console.log(error);
     }
   }
 
@@ -45,13 +56,17 @@ const SinglePost = () => {
           src={PF + postItem.photo}
           alt=""
         />)}
-        <h1 className="singlePostTitle">
-         {postItem.title}
+        {
+          updateMode ? <input type="text" value={title} className="singlePostTitleInput" onChange={(e) =>setTitle(e.target.value)}/> : (
+            <h1 className="singlePostTitle">
+         {title}
          {postItem.username === user?.username && ( <div className="singlePostEdit">
             <i className="singlePostIcon far fa-edit" onClick={() => setUpdateMode(true)}></i>
             <i className="singlePostIcon far fa-trash-alt" onClick={handleDelete}></i>
           </div>)}
         </h1>
+          )
+        }
         <div className="singlePostInfo">
           <span>
             Author:
@@ -63,9 +78,11 @@ const SinglePost = () => {
           </span>
           <span>{new Date(postItem.createdAt).toDateString()}</span>
         </div>
-        <p className="singlePostDesc">
-          {postItem.description}
-        </p>
+       { updateMode ? <textarea value={description} className="singlePostDescInput" onChange={(e) =>setDescription(e.target.value)}></textarea> : ( <p className="singlePostDesc">
+          {description}
+        </p>)}
+
+        <button className="singlePostUpdate" onClick={handleUpdate}>Update</button>
       </div>
     </div>
   )
