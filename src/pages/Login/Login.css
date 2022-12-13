@@ -2,7 +2,7 @@
 
 
 .login {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,8 @@
   background-color: aliceblue;
   width: 100%;
   font-family: 'Jost', sans-serif;
-}
+  overflow-y: hidden !important;
+} 
 
 .loginTitle {
   font-size: 50px;
@@ -24,7 +25,7 @@
   color: #585858;
   padding: 30px;
   border-radius: 5px;
-  margin: 70px auto;
+  overflow-y: hidden !important;
 }
 
 .login-header{
