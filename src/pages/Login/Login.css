@@ -2,7 +2,7 @@
 
 
 .login {
-  height: calc(100vh - 50px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,6 @@
   background-color: aliceblue;
   width: 100%;
   font-family: 'Jost', sans-serif;
-  margin-top: 60px;
 }
 
 .loginTitle {
@@ -25,6 +24,7 @@
   color: #585858;
   padding: 30px;
   border-radius: 5px;
+  margin: 70px auto;
 }
 
 .login-header{
