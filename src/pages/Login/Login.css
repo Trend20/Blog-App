@@ -74,8 +74,12 @@
 
 .loginInput:focus {
   outline: none;
-  border-bottom: 2px solid #4d61fc;
+  border-bottom: 2px solid red;
   transition: .3s ease-in;
+}
+
+.error-text{
+  color: red;
 }
 
 .loginButton {
