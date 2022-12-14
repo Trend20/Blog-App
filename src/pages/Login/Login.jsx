@@ -59,7 +59,7 @@ const Login = () => {
             <i><FiArrowRight size= {25}/></i>
           </button>
         </form>
-        <p className="sign-up">Not a member yet? 
+        <p className="sign-up">Not a member yet?
         <Link to="/register" className="signup-link">
             Sign Up
           </Link>

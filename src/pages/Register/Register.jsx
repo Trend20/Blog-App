@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 import { CgProfile } from 'react-icons/cg';
 import { FiArrowRight } from 'react-icons/fi'
 import { MdFacebook } from 'react-icons/md';
@@ -9,12 +10,13 @@ import './Register.css';
 
 const Register = () => {
 
+  const { register, handleSubmit, watch, formState:{errors}} = useForm();
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError ] =useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     setError(false)
     try {
@@ -38,25 +40,31 @@ const Register = () => {
           </i>
           <h1>Create Account!</h1>
         </div>
-      <form className="registerForm" onSubmit={handleSubmit}>
+      <form className="registerForm" onSubmit={handleSubmit(handleFormSubmit)}>
         <label>Username</label>
         <input
           className="registerInput"
           type="text"
           onChange={(e) => setUsername(e.target.value)}
+          {...register("username", { required: true })}
         />
+        <p className="error-text">{errors.password && <span>Username is required</span>}</p>
         <label>Email</label>
         <input
           className="registerInput"
           type="text"
           onChange={(e) => setEmail(e.target.value)}
+          {...register("email", { required: true })}
         />
+        <p className="error-text">{errors.email && <span>Email is required</span>}</p>
         <label>Password</label>
         <input
           className="registerInput"
           type="password"
           onChange={(e) => setPassword(e.target.value)}
+          {...register("password", { required: true })}
         />
+        <p className="error-text">{errors.password && <span>Password is required</span>}</p>
         <button className="registerButton" type="submit">
           Register
           <i><FiArrowRight size= {25}/></i>
