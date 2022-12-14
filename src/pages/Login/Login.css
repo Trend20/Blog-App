@@ -20,11 +20,12 @@
 .login-contents{
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 40%;
   background: #ffffff;
   color: #585858;
   padding: 30px;
   border-radius: 5px;
+  height: 550px;
   overflow-y: hidden !important;
 }
 
@@ -80,19 +81,20 @@
 
 .error-text{
   color: red;
+  margin-top: 3px !important;
 }
 
 .loginButton {
   margin-top: 25px;
   cursor: pointer;
   color: white;
-  padding: 15px;
+  padding: 12px;
   border: none;
   text-align: center;
   align-items: center;
   display: flex;
   background: #4d61fc;
-  width: 40%;
+  width: 30%;
   border-radius: 5px;
   font-weight: 700;
   font-size: 1.2rem;

@@ -2,7 +2,7 @@
 
 
 .register {
-  height: calc(100vh - 50px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,6 @@
   background-color: aliceblue;
   width: 100%;
   font-family: 'Jost', sans-serif;
-  margin-top: 60px;
   overflow: hidden;
 }
 
@@ -21,7 +20,7 @@
 .register-contents{
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 40%;
   background: #ffffff;
   color: #585858;
   padding: 20px;
@@ -69,7 +68,6 @@
   border: none;
   border-bottom: 1px solid #96959c;
   opacity: .8;
-  margin-top: -10px;
 }
 
 .registerInput:focus {

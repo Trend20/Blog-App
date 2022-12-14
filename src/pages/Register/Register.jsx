@@ -48,7 +48,7 @@ const Register = () => {
           onChange={(e) => setUsername(e.target.value)}
           {...register("username", { required: true })}
         />
-        <p className="error-text">{errors.password && <span>Username is required</span>}</p>
+        <p className="error-text">{errors.username && <span>Username is required</span>}</p>
         <label>Email</label>
         <input
           className="registerInput"
@@ -69,16 +69,16 @@ const Register = () => {
           Register
           <i><FiArrowRight size= {25}/></i>
         </button>
-        <hr />
+        {/* <hr /> */}
       </form>
-      <div className="social-icons">
+      {/* <div className="social-icons">
         <h5>Or create account using social media!</h5>
         <span>
           <i><MdFacebook size={25} fill='#3b5998'/></i>
           <i><AiFillTwitterCircle size={25} fill='#1da1f2' /></i>
           <i><AiFillGithub size={25} fill='#171515' /></i>
         </span>
-      </div>
+      </div> */}
       <p className="login-text">Already a member? 
         <Link to="/login" className="signup-link">
             Login

@@ -1,5 +1,4 @@
 import './App.css';
-import TopBar from './components/TopBar/TopBar';
 import Home from './pages/Home/Home';
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
@@ -13,7 +12,6 @@ function App() {
   const {user}= useContext(Context);
   return (
     <>
-      <TopBar />
       <Routes>
         <Route exact path="/"  element={<Home />} />
         <Route path="/posts"  element={<Home />} />
