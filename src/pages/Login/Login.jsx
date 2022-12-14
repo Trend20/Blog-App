@@ -13,7 +13,7 @@ const Login = () => {
   const { user, dispatch, isFetching } = useContext(Context);
   const { register, handleSubmit, watch, formState:{ errors }} = useForm();
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = async (data, e) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { CgProfile } from 'react-icons/cg';
 import { FiArrowRight } from 'react-icons/fi'
-import { MdFacebook } from 'react-icons/md';
-import { AiFillTwitterCircle, AiFillGithub } from 'react-icons/ai'
+// import { MdFacebook } from 'react-icons/md';
+// import { AiFillTwitterCircle, AiFillGithub } from 'react-icons/ai'
 import './Register.css';
 
 const Register = () => {
@@ -17,7 +17,7 @@ const Register = () => {
   const [error, setError ] =useState(false);
 
   const handleFormSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     setError(false)
     try {
       const res = await axios.post("http://localhost:5500/api/auth/register", {
