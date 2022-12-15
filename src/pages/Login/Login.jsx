@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useContext, useRef } from "react";
 import { Context } from "../../context/Context";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { FaSignInAlt } from "react-icons/fa";
 import { FiArrowRight } from 'react-icons/fi'
@@ -11,9 +11,9 @@ const Login = () => {
   const userRef = useRef();
   const passwordRef = useRef();
   const { user, dispatch, isFetching } = useContext(Context);
-  const { register, handleSubmit, watch, formState:{ errors }} = useForm();
+  // const { register, handleSubmit, watch, formState:{ errors }} = useForm();
 
-  const handleFormSubmit = async (data, e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
@@ -37,23 +37,21 @@ const Login = () => {
           <h1>Welcome!</h1>
           <h5>Sign in to your account</h5>
         </div>
-        <form className="loginForm" onSubmit={handleSubmit(handleFormSubmit)}> 
+        <form className="loginForm" onSubmit={handleFormSubmit}> 
           <label>Username</label>
           <input
             className="loginInput"
             type="text"
             ref={userRef}
-            {...register("username", { required: true })}
           />
-          <p className="error-text">{errors.username && <span>Enter username</span>}</p>
+          {userRef.current === '' && (<p className="error-text"> <span>Enter username</span></p>)}
           <label>Password</label>
           <input
             className="loginInput"
             type="password"
             ref={passwordRef}
-            {...register("password", { required: true })}
           />
-          <p className="error-text">{errors.password && <span>Password is required</span>}</p>
+         {passwordRef.current === '' && ( <p className="error-text"><span>Password is required</span></p>)}
           <button className="loginButton" type="submit" disabled={isFetching}>
             Login
             <i><FiArrowRight size= {25}/></i>
