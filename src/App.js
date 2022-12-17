@@ -8,10 +8,12 @@ import Write from "./pages/Write/Write";
 import { Routes, Route } from "react-router-dom";
 import { useContext } from 'react';
 import { Context } from './context/Context';
+import TopBar from './components/TopBar/TopBar';
 function App() {
   const {user}= useContext(Context);
   return (
     <>
+      <TopBar />
       <Routes>
         <Route exact path="/"  element={<Home />} />
         <Route path="/posts"  element={<Home />} />
