@@ -1,6 +1,6 @@
 .posts{
-  flex: 9;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 20px;
   margin: 40px 20px;
 }

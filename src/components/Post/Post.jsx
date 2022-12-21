@@ -27,6 +27,7 @@ const Post = ({post}) => {
         </span>
       </div>
       <p className="postDesc">{post.description}</p>
+      <Link to={`/post/${post._id}`} id="read-more">Read More</Link>
     </div>
   );
 }

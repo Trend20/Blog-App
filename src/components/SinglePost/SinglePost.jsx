@@ -82,7 +82,7 @@ const SinglePost = () => {
           {description}
         </p>)}
 
-        <button className="singlePostUpdate" onClick={handleUpdate}>Update</button>
+        {updateMode && (<button className="singlePostUpdate" onClick={handleUpdate}>Update</button>)}
       </div>
     </div>
   )

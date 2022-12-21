@@ -62,3 +62,30 @@
   font-size: 30px;
   font-weight: 600;
 }
+
+.singlePostTitleInput{
+  width: 50%;
+  outline: none;
+  padding: 10px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.singlePostDescInput{
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 100px !important;
+  resize: both;
+  outline: none;
+}
+.singlePostUpdate{
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  float: right;
+}
