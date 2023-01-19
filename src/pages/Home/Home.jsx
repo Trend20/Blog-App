@@ -23,7 +23,10 @@ const Home = () => {
   return (
     <>
      <div>
-     <Header />
+     <Header 
+      title="Don't miss any update on our new articles!" 
+      description="Get our free articles direct on your email as soon as they get published!" 
+     />
       <div className='home'>
         <Posts posts={posts} />
         <Sidebar />

@@ -1,6 +1,5 @@
 import axios from "axios";
-import { useEffect, useContext } from "react";
-import { useState } from "react";
+import { useEffect, useContext, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import './SinglePost.css';
 import { Context } from '../../context/Context';
@@ -14,7 +13,6 @@ const SinglePost = () => {
   const [title, setTitle ] = useState('');
   const [description, setDescription] = useState('');
   const [updateMode, setUpdateMode] = useState(false);
-
   const [postItem, setPostItem] = useState({});
   // fetch the post using id
   useEffect(() =>{
