@@ -8,7 +8,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   border-radius: 7px;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   padding: 10px;
   width: 100%;
 }
@@ -23,7 +23,6 @@
 .postInfo {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .postCat {
@@ -52,9 +51,6 @@
   font-weight: 400;
   color: #999999;
   margin-top: 15px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .postDesc {
@@ -62,7 +58,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  height: 100px;
+  height: 70px;
   color: #444444;
   margin-top: 15px;
   overflow: hidden;
