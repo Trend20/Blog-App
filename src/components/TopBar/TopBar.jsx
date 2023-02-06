@@ -23,9 +23,9 @@ const TopBar = () => {
               HOME
             </Link>
           </li>
-          <li className="topBarListItem">
+          {/* <li className="topBarListItem">
             <Link to="/about" className='link'>ABOUT</Link>
-          </li>
+          </li> */}
           <li className="topBarListItem">
             <Link className='link' to="/write">
               WRITE
@@ -50,7 +50,6 @@ const TopBar = () => {
               </Link>
           </button>
         )}
-        {/* <i className="topSearchIcon fa-solid fa-magnifying-glass"></i> */}
       </div>
     </div>
   )
