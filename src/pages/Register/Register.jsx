@@ -42,21 +42,21 @@ const Register = () => {
           type="text"
           onChange={(e) => setUsername(e.target.value)}
         />
-        <p className="error-text"><span>Username is required</span></p>
+        {/* <p className="error-text"><span>Username is required</span></p> */}
         <label>Email</label>
         <input
           className="registerInput"
           type="text"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <p className="error-text"><span>Email is required</span></p>
+        {/* <p className="error-text"><span>Email is required</span></p> */}
         <label>Password</label>
         <input
           className="registerInput"
           type="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <p className="error-text"><span>Password is required</span></p>
+        {/* <p className="error-text"><span>Password is required</span></p> */}
         <button className="registerButton" type="submit">
           Register
           <i><FiArrowRight size= {25}/></i>
@@ -67,7 +67,7 @@ const Register = () => {
             Login
           </Link>
         </p>
-      {error && <span>Something went wrong!</span>}
+      {/* {error && <span>Something went wrong!</span>} */}
      </div>
     </div>
   );

@@ -24,9 +24,9 @@
   background: #ffffff;
   color: #585858;
   padding: 30px;
+  position: absolute;
   border-radius: 5px;
   height: 550px;
-  overflow-y: hidden !important;
 }
 
 .login-header{
