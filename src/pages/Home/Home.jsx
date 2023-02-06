@@ -1,9 +1,9 @@
 import axios from "axios";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState} from "react";
 import { useLocation } from "react-router";
 import Header from '../../components/Header/Header';
 import Posts from '../../components/Posts/Posts';
-import Sidebar from '../../components/Sidebar/Sidebar';
+// import Sidebar from '../../components/Sidebar/Sidebar';
 import './Home.css';
 
 const Home = () => {
@@ -29,7 +29,7 @@ const Home = () => {
      />
       <div className='home'>
         <Posts posts={posts} />
-        <Sidebar />
+        {/* <Sidebar /> */}
       </div>
      </div>
     </>

@@ -1,11 +1,13 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.css';
+import { Context } from '../../context/Context';
 
 const Sidebar = () => {
 
   const [categories, setCategories] = useState([]);
+  const user = useContext(Context);
 
   useEffect(() =>{
     const getCategories = async() =>{
@@ -16,12 +18,11 @@ const Sidebar = () => {
   }, [])
   return (
     <div className='sidebar'>
-      <div className="sidebarItem">
-        <span className="sidebarTitle">ABOUT ME</span>
-        <img src="/assets/profile.jpg" alt="profile" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Quidem asperiores mollitia veniam voluptas beatae! Minima accusamus iure consequuntur dolor optio.</p>
-      </div>
+    {/* <div className="sidebarItem">
+      <span className="sidebarTitle">ABOUT ME</span>
+      <img src={user.profilePic} alt="profile" />
+      <p>Frontend Software Developer</p>
+    </div> */}
       <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className='sidebarList'>
@@ -33,7 +34,7 @@ const Sidebar = () => {
             ))}
         </ul>
       </div>
-      <div className="sidebarItem">
+      {/* <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW US</span>
        <div className="sidebarSocial">
         <i className="sidebarIcon fa-brands fa-facebook"></i>
@@ -41,7 +42,7 @@ const Sidebar = () => {
         <i className="sidebarIcon fa-brands fa-github"></i>
         <i className="sidebarIcon fa-brands fa-hashnode"></i>
        </div>
-      </div>
+      </div> */}
     </div>
   )
 }

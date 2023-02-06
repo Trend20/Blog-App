@@ -1,6 +1,7 @@
 .posts{
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
   margin: 40px 20px;
+  flex: 9;
 }
