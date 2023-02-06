@@ -5,18 +5,12 @@ const Subscribe = () => {
   const [status, setStatus] = useState(null);
   const [email, setEmail] = useState("");
 
-  // handle email change
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
   const FORM_URL = "https://app.convertkit.com/forms/3801514/subscriptions";
   // form submission
   const handleFormSubmit = async (event) => {
+  // prevent default form behavior
     event.preventDefault();
-
     const data = new FormData(event.target);
-
     try {
       const response = await fetch(FORM_URL, {
         method: "post",
@@ -27,7 +21,8 @@ const Subscribe = () => {
       });
       setEmail("");
       const json = await response.json();
-      console.log(response);
+      setStatus(json.status);
+      console.log(response, status);
       if (json.status === "success") {
         return;
       }
@@ -66,7 +61,7 @@ const Subscribe = () => {
             className="input"
             value={email}
             name="email_address"
-            onChange={handleEmailChange}
+            onChange={(e) =>setEmail(e.target.value)}
             type="email"
             placeholder="Email Address"
           />
